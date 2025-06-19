@@ -1,0 +1,18 @@
+﻿#include <windows.h>
+
+// 定義為自定義資源類型（而非圖標）
+#define JS_RESOURCE_TYPE 256
+JS_RESOURCE_TYPE JS_FILE "app.js"  // 嵌入JS文件
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+{
+    BLOCK "StringFileInfo" {
+        BLOCK "040904b0" {
+            VALUE "FileDescription", "Update config.txt PO_token for yt-dlp",
+            VALUE "ProductName", "ytdlp-po-token-updater",
+            VALUE "LegalCopyright", "Copyright c 2025 fan198202@gmail.com"
+        }
+    }
+}

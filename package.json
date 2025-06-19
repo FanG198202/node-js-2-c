@@ -1,0 +1,46 @@
+{
+  "name": "update-ytdlp-po-token",
+  "version": "1.0.0",
+  "description": "Update PO_token in config.txt for yt-dlp use.",
+  "main": "update-ytdlp-po-token_v3.js",
+  "scripts": {
+    "start": "node update-ytdlp-po-token_v3.js",
+    "build": "rc.exe /fo version.res version.rc && pkg . --output ytdlp-po-token-updater.exe"
+  },
+  "author": "fan198202@gmail.com",
+  "license": "MIT",
+  "bin": {
+    "update-ytdlp-po-token": "update-ytdlp-po-token_v3.js"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "pkg": {
+    "scripts": "update-ytdlp-po-token_v3.js",
+    "assets": [
+      "node_modules/youtube-po-token-generator/**/*",
+      "node_modules/http-proxy/**/*",
+      "version.rc",
+      "version.res"
+    ],
+    "targets": ["node16-win-x64"],
+    "win32metadata": {
+      "CompanyName": "fan198202@gmail.com",
+      "FileDescription": "config.txt PO Token Updater for yt-dlp.",
+      "ProductName": "ytdlp-po-token-updater",
+      "ProductVersion": "1.0.0",
+      "OriginalFilename": "ytdlp-po-token-updater.exe"
+    },
+    "resourceHack": true
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1",
+    "youtube-po-token-generator": "^0.4.0"
+  },
+  "files": [
+    "update-ytdlp-po-token_v3.js",
+    "version.rc",
+    "version.res"
+  ]
+}
